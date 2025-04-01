@@ -1,0 +1,894 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>My first Project1 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'wordcloud';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Content with notebooks" href="notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Hi, this is Snow’s Program Channel — Snowbook 📘❄️
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Wordcloud Project</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fwordcloud.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/wordcloud.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>My first Project1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-project-about">What is this project about？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-did-i-do-it">Why did i do it？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-tools-did-i-use">What tools did I use？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">1. Data import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">2. Data processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus-generating">3. Corpus Generating</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-frequency-counting">4. Word frequency counting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wordcloud-generating">5. Wordcloud Generating</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation">6. Visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">7. Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-small-side-quest-regional-word-cloud">A small side quest：regional word cloud！</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">8. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-i-learn">What did I learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-could-be-better">What could be better?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thought">Final thought</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="my-first-project1">
+<h1>My first Project1<a class="headerlink" href="#my-first-project1" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="what-is-this-project-about">
+<h2>What is this project about？<a class="headerlink" href="#what-is-this-project-about" title="Link to this heading">#</a></h2>
+<p>This little project started with a super practical need at work: I had access to a batch of article titles from the English Language Learning journal, and I wanted to know — what are people actually writing about? What topics are trending? What do researchers seem to care about the most?</p>
+<p>I figured a word cloud could be a quick, intuitive way to get a sense of it. More importantly, I wanted to use this as a chance to play around with Python + NLP tools on real data from my field (language education). So, this became both a content analysis project and a personal practice assignment rolled into one.</p>
+</section>
+<section id="why-did-i-do-it">
+<h2>Why did i do it？<a class="headerlink" href="#why-did-i-do-it" title="Link to this heading">#</a></h2>
+<p>To be honest, I’ve always felt that journal content can feel a bit… abstract or scattered if you just skim through titles. But if we could pull all the titles together and extract keywords, patterns might emerge. This kind of small project can be useful for:</p>
+<p>Guiding editorial direction (what themes are we already overloaded with?)
+Helping contributors see what’s hot (or overdone…)
+Just satisfying my curiosity :）
+Also, as someone learning data tools, I wanted to test-drive some basic NLP workflows: text cleaning, segmentation, frequency analysis, visualization — all in Python.</p>
+</section>
+<section id="what-tools-did-i-use">
+<h2>What tools did I use？<a class="headerlink" href="#what-tools-did-i-use" title="Link to this heading">#</a></h2>
+<p>Pretty standard setup:</p>
+<p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> – for loading the Excel data (which came straight from the editorial system)
+<code class="docutils literal notranslate"><span class="pre">jieba</span></code> – for Chinese word segmentation
+<code class="docutils literal notranslate"><span class="pre">counter</span></code> – to count word frequency
+<code class="docutils literal notranslate"><span class="pre">wordcloud</span></code> – for visualizing the results
+<code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> – for showing the image
+Also, I had to deal with font paths on my Mac (because Chinese in wordcloud needs a proper .ttc font).</p>
+</section>
+<section id="data-import">
+<h2>1. Data import<a class="headerlink" href="#data-import" title="Link to this heading">#</a></h2>
+<p>First things first — I started by importing the basic libraries I needed for the project. Nothing too fancy, just the usual stack for working with Excel files and doing some text processing in Python.</p>
+<p>The data itself came from my actual work — we use an editorial system that stores manuscript info, and it luckily allows us to export everything directly as an Excel file. Super convenient! I didn’t have to clean raw HTML or scrape anything — just hit “Export” and I was ready to go.</p>
+<p>So I wrote this to load things up:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">jieba</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">jieba</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;jieba&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then I loaded the file like this:
+【A small thing I noticed: the actual header (column names) were on the second row in the Excel file, so I had to set header=1 to read it properly. Without that, df[‘标题’] wouldn’t work later.】</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;/Users/snowliu/Downloads/20250307170539.xls&quot;</span>
+
+<span class="c1"># Read Excel</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;稿件信息&quot;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           稿件编号                                                 标题  字数 第一作者姓名  \
+0    2016040025                                    例谈单元导读课的课堂设计与反思 NaN    葛婷婷   
+1    2023080023                                 科普故事融合阅读教学路径的设计与实施 NaN     徐晶   
+2    2021070023                                     “骨架文本”中思维训练的铺展 NaN    顾小亮   
+3    2016010009  浅析译林版《英语》ticking time板块的 有效教学——以译林版《英语》3B Unit... NaN     沈芸   
+4    2016040034                                 高中英语阅读教学中开展读后续写的尝试 NaN     张强   
+..          ...                                                ...  ..    ...   
+160  2020040045                  在过程性教学中运用Storytelling培养学生的输出性语言技能 NaN    王君元   
+161  2023020032       从评委点评反观阅读教学的认知情况 ——以11-13届全国初中英语课堂教学观摩培训课为个案 NaN    陈能昊   
+162  2023030090  基于英语学习活动观的对话教学策略 ——以PEP五年级上册Unit 5 There is a ... NaN    许维维   
+163  2024010133           主题语境引领下的高中英语语法教学：外研版《英语》（新标准）第二册第六单元案例分析 NaN     丛蕾   
+164  2023110060                                   在英语课堂中视频教学的探讨与实践 NaN    许时升   
+
+         第一作者单位             第一作者E-mail 第二作者姓名     第二作者单位            第二作者Email  \
+0    江苏省南通田家炳中学       810136381@qq.com    NaN        NaN                  NaN   
+1     大连市第七十九中学        14910333@qq.com    夏源梓  大连市第二十八中学    1210572318@qq.com   
+2           NaN  guxiaoliang_l@163.com    NaN        NaN                  NaN   
+3     昆山市第一中心小学       252139079@qq.com    NaN        NaN                  NaN   
+4       浙江省平湖中学   dashenlin123@163.com    NaN        NaN                  NaN   
+..          ...                    ...    ...        ...                  ...   
+160      杭州云谷学校  angela.wang@yungu.org    谢慧萍     杭州云谷学校  grace.xie@yungu.org   
+161         NaN       eddiecnh@163.com    应建芬     浙江师范大学       zsdyjf@zjnu.cn   
+162         NaN       412191495@qq.com    NaN        NaN                  NaN   
+163   山东省烟台第一中学       842762843@qq.com    NaN        NaN                  NaN   
+164         NaN       443613995@qq.com    罗彩甜   佛山市外国语学校      lct2626@126.com   
+
+    第三作者姓名  ...                 投稿时间  联系人                               通信地址  \
+0      NaN  ...   2016/4/19 15:48:12  葛婷婷                         江苏省南通田家炳中学   
+1      NaN  ...    2023/8/7 15:57:04   徐晶        大连市沙河口区莲花山路104号1单元4楼1号李永华女士   
+2      NaN  ...    2021/7/9 15:00:46  顾小亮                                NaN   
+3      NaN  ...   2016/1/12 19:08:49   沈芸            江苏省昆山市集街178号 第一中心小学（分部）   
+4      NaN  ...   2016/4/25 14:38:51   张强                     浙江省平湖市东湖大道831号   
+..     ...  ...                  ...  ...                                ...   
+160    NaN  ...   2020/4/16 22:21:19  王君元                   杭州市西湖区春申街17号云谷学校   
+161    NaN  ...    2023/2/9 18:17:14  陈能昊            浙江省金华市婺城区迎宾大道688号浙江师范大学   
+162    NaN  ...   2023/3/23 17:53:27  许维维                                NaN   
+163    NaN  ...   2024/1/29 18:07:36   丛蕾  19953516726 山东省烟台市莱山区前七夼天成西巷50-11   
+164    NaN  ...  2023/11/18 15:11:11  许时升                                NaN   
+
+         邮政编码             座机          移动电话               联系人Email  \
+0    226001.0  0513-81100295  1.386294e+10       810136381@qq.com   
+1    116021.0       84312203  1.305277e+10        14910333@qq.com   
+2         NaN            NaN  1.824890e+10  guxiaoliang_l@163.com   
+3    215300.0            NaN  1.525029e+10       252139079@qq.com   
+4    314200.0            NaN  1.375735e+10   dashenlin123@163.com   
+..        ...            ...           ...                    ...   
+160       NaN            NaN  1.760581e+10  angela.wang@yungu.org   
+161  321004.0            NaN  1.786063e+10       eddiecnh@163.com   
+162       NaN            NaN  1.588817e+10       412191495@qq.com   
+163  264001.0            NaN  1.856130e+10       842762843@qq.com   
+164       NaN            NaN  1.813832e+10       443613995@qq.com   
+
+              状态 第一作者ORCID        地区  
+0    编辑部处理完毕[录用]       NaN  安徽省宿州市    
+1    编辑部处理完毕[录用]       NaN     巴中市    
+2    编辑部处理完毕[录用]       NaN      北京    
+3    编辑部处理完毕[录用]       NaN      北京    
+4    编辑部处理完毕[录用]       NaN      北京    
+..           ...       ...       ...  
+160  编辑部处理完毕[录用]       NaN       NaN  
+161  编辑部处理完毕[录用]       NaN       NaN  
+162  编辑部处理完毕[录用]       NaN       NaN  
+163  编辑部处理完毕[录用]       NaN       NaN  
+164  编辑部处理完毕[录用]       NaN       NaN  
+
+[165 rows x 22 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you can see, I just threw all the titles into a word cloud without any cleaning. Big mistake. The top words were super generic: things like “的” (‘s), “与” (and), “为例” (a case study of…)… basically, words that show up in almost every academic title. I need to do something！</p>
+</section>
+<section id="data-processing">
+<h2>2. Data processing<a class="headerlink" href="#data-processing" title="Link to this heading">#</a></h2>
+<p>So I made a custom stopword list, based on what I see over and over in educational writing. This step turned out to be the most valuable — it made the final output much clearer.</p>
+<p>Also:</p>
+<p>I kept only Chinese words (filtering out symbols and punctuation)
+I excluded words shorter than 2 characters
+I joined all titles into one string before segmentation
+This whole process reminded me that clean data beats fancy tools. Even the best word cloud won’t help if your data is full of noise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2. Processing Chinese word segmentation</span>
+<span class="k">def</span> <span class="nf">process_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># Custom stopword list: Since many meaningless words exist in these titles, they need to be removed in order to retain only the key terms.</span>
+    <span class="n">stopwords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;的&#39;</span><span class="p">,</span> <span class="s1">&#39;与&#39;</span><span class="p">,</span> <span class="s1">&#39;及&#39;</span><span class="p">,</span> <span class="s1">&#39;在&#39;</span><span class="p">,</span> <span class="s1">&#39;基于&#39;</span><span class="p">,</span> <span class="s1">&#39;下&#39;</span><span class="p">,</span> <span class="s1">&#39;中&#39;</span><span class="p">,</span> <span class="s1">&#39;例&#39;</span><span class="p">,</span> <span class="s1">&#39;以&#39;</span><span class="p">,</span> <span class="s1">&#39;为例&#39;</span><span class="p">,</span> <span class="s1">&#39;——&#39;</span><span class="p">,</span> <span class="s1">&#39;实践&#39;</span><span class="p">,</span> <span class="s1">&#39;研究&#39;</span><span class="p">,</span> <span class="s1">&#39;教学&#39;</span><span class="p">,</span> <span class="s1">&#39;设计&#39;</span><span class="p">,</span> <span class="s1">&#39;策略&#39;</span><span class="p">,</span> <span class="s1">&#39;探究&#39;</span><span class="p">,</span><span class="s1">&#39;创设&#39;</span><span class="p">,</span><span class="s1">&#39;英语&#39;</span><span class="p">,</span><span class="s1">&#39;高中英语&#39;</span><span class="p">,</span><span class="s1">&#39;浅析&#39;</span><span class="p">,</span><span class="s1">&#39;课为例&#39;</span><span class="p">,</span><span class="s1">&#39;促进&#39;</span><span class="p">,</span><span class="s1">&#39;相结合&#39;</span><span class="p">,</span><span class="s1">&#39;学生&#39;</span><span class="p">,</span><span class="s1">&#39;学习&#39;</span><span class="p">,</span><span class="s1">&#39;培养&#39;</span><span class="p">,</span><span class="s1">&#39;运用&#39;</span><span class="p">,</span><span class="s1">&#39;探索&#39;</span><span class="p">,</span><span class="s1">&#39;及其&#39;</span><span class="p">,</span><span class="s1">&#39;尝试&#39;</span><span class="p">,</span><span class="s1">&#39;如何&#39;</span><span class="p">,</span><span class="s1">&#39;提升&#39;</span><span class="p">,</span><span class="s1">&#39;整合&#39;</span><span class="p">,</span><span class="s1">&#39;提高&#39;</span><span class="p">,</span><span class="s1">&#39;初中&#39;</span><span class="p">,</span><span class="s1">&#39;初中生&#39;</span><span class="p">,</span><span class="s1">&#39;一节&#39;</span><span class="p">,</span><span class="s1">&#39;分析&#39;</span><span class="p">,</span><span class="s1">&#39;有效&#39;</span><span class="p">,</span><span class="s1">&#39;多轮&#39;</span><span class="p">,</span><span class="s1">&#39;教育&#39;</span><span class="p">,</span><span class="s1">&#39;依托&#39;</span><span class="p">,</span><span class="s1">&#39;通过&#39;</span><span class="p">,</span><span class="s1">&#39;小学&#39;</span><span class="p">,</span><span class="s1">&#39;初中英语&#39;</span><span class="p">,</span><span class="s1">&#39;高中生&#39;</span><span class="p">,</span><span class="s1">&#39;开展&#39;</span><span class="p">,</span><span class="s1">&#39;指向&#39;</span><span class="p">,</span><span class="s1">&#39;高中&#39;</span><span class="p">,</span><span class="s1">&#39;结合&#39;</span><span class="p">,</span><span class="s1">&#39;中学英语&#39;</span><span class="p">,</span><span class="s1">&#39;问题&#39;</span><span class="p">,</span><span class="s1">&#39;为例&#39;</span><span class="p">,</span><span class="s1">&#39;例谈&#39;</span><span class="p">,</span><span class="s1">&#39;译林&#39;</span><span class="p">,</span><span class="s1">&#39;融合&#39;</span><span class="p">,</span><span class="s1">&#39;阅读教学&#39;</span><span class="p">,</span><span class="s1">&#39;中小&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># Use Jieba for word segmentation</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+    
+    <span class="c1"># Filter out stopwords and non-Chinese characters</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> 
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> 
+           <span class="s1">&#39;</span><span class="se">\u4e00</span><span class="s1">&#39;</span> <span class="o">&lt;=</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;</span><span class="se">\u9fff</span><span class="s1">&#39;</span> <span class="ow">and</span> 
+           <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="corpus-generating">
+<h2>3. Corpus Generating<a class="headerlink" href="#corpus-generating" title="Link to this heading">#</a></h2>
+<p>In this step, I can generate a corpus from the title keywords after word segmentation and filtering.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate corpus</span>
+<span class="n">all_titles</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;标题&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">())</span>
+<span class="n">processed_text</span> <span class="o">=</span> <span class="n">process_text</span><span class="p">(</span><span class="n">all_titles</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then I print the filtered keywords.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">processed_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>单元 导读 课堂 反思 科普 故事 路径 实施 骨架 文本 思维 训练 铺展 板块 后续 身临其境 乐在其中 语篇 意识 创编 对话 能力 衔接 自然 拼读 国际音标 语音 教学策略 初探 解码 绘本 批注 阅读 素养 单元 活动 标题 一体化 戏剧 仲夏夜 之梦 逆向 单元 写作 教版 八年级 下册 逆向 理念 指导 对话 英国 民族 身份 社会 文化 视阙 维多利亚 淑女 典范 模型 教材 项目 人教版 选修 板块 改变 教师 话语 课堂 参与度 行动 修改 三新 背景 中小学 教师 文学 素养 路径 英语教材 对话 部分 词块 结构化 知识 作为 主线 单元 整体 路径 以外 研版 初二 设计说明 构建 任务 目标 合理 定位 例析 文学 课外阅读 文本 解读 以写 促读 理念 报刊 批注 阅读 范文 写作 意义 应用 语料库 技术 读写能力 多维 阅读 故事 失踪 着眼 整体 优化 听前 活动 北师大 听说 目标 设定 单元 整体 作业 进阶 阅读 写作 协同 发展 群文 读写 课堂 绘本 读写 双向 融通 教学策略 小初 衔接 现状 思考 以同 异构 阅读 拓展 产出 导向 视域 读写 对策 基本 私下 对话 应对 方式 对话 口译 译员 角色 表现 眼神 互动 转换 两项 指标 案例 精设 构建 高效 课堂 牛津 上海 故事 板块 双重 角色 阅读 模式 故事 创新 应用 八年级 典范 故事 阅读课 根据 新闻 语篇 特点 指导 新闻 听说 循环式 课堂 活动 社会主义 核心 价值观 写作 命题 渗透 过程 取向 听力 公开课 片段 评析 思考 深层 文本 解读 中学生 思维能力 研版 标准 五年级 上册 例议 课堂教学 思维 灵活性 写作 教学策略 校际 协作 教研 模式 欧洲 我国 外语 改革 正式 聚焦 主题 语境 阅读 教学模式 巧借 语法 课堂 助推 思维 发展 阅读 课堂 积极 反馈 认知 支架 功能 特征 视听 课中 批判性 思维 题为 八年级 视听 围绕 话题 情境 激发 思维 过程 写作 高阶 思维 阅读课 读后 活动 主题 意义 复述 写作水平 小学生 创新 精神 绘本 阅读 思考 语篇 组织 模式 说明文 文本 解构 多元 支架 诗歌 实效 从白 牡丹亭 英译本 中国 古典 戏剧 英译 表演性 核心 素养 说明文 背诵 一体化 师生 共读 整本书 阅读 指导 能力 听说 评价 实施 单元 作业 减轻 作业负担 行动 人教版 一年级 起点 五上 单元 作业 单元 整体 视角 写作 对话 预测 技巧 核心 素养 导向 文学 语篇 细节 描写 教学策略 深度 后续 课堂教学 评价 活动 实施 绘本 教材 文化 意识 连接 视角 读写 实施 路径 贝多芬 黑人 看纳丁 戈迪默 晚期 风格 单元 主题 意义 绘本 初探 一图 多用 英语教材 图片 资源 利用 实效 主题 意义 绘本 多维 阅读 第七级 一课 真理 稳定性 约翰逊 莎评 理性 听写 重构 听说 课中 构建 一体 诗歌 模型 文中 思图 外研 版图 文式 教材 主题 语境 英语词汇 心智 图法 仿写 练习 应用 新课标 深圳 牛津 三年级 图片 信息 再构 文本 教学策略 英文 绘本 阅读 课堂 提问 连环 改进 交互 协同 写作 步法 英语教学 应用 单元 整体 教材 插图 五种 使用 方法 关于 阅读课 开放性 参与度 行动 重新 一遍 中要 强化 阅读 渗透 意识 会话 语言 承载 浅谈 英语课堂 童话故事 进行 思维 训练 一堂 课题 实验课 教研 拓展 渠道 六年级 写作能力 思维 导图 英文 小说 思维 品质 探例 理论 高年级 提问 课型 可视化 诊断 测评 基础 教师 课堂 评价 素养 发展 个案研究 诊断 促评 以评 促教 英语课堂 建立 评价 模式 戏剧 文学 阅读 课堂 语篇 语境 英语语法 复习 三巧 实施 微语 阅读 语言 知识 单元 主题 意义 互动 协同效应 后续 学科 核心 素养 活动 探析 听记 复述 听说 能力 思考 信息技术 支持 习本 初探 基本 高中学生 学科 思维 品质 细读 泛读 复杂 文本 阅读 推进 后续 听力 测评 反拨 听力 路径 绘本 阅读 拼读 课中 五年级 上册 语料库 词语 搭配 应用 启示 联接 项目 活动 生活实践 课型 应用文 阅读 课堂 反思 利用 教材 插图 优化 语篇 侦探 破案 情境 创新 文学 赏读 思路 科普 说明文 思维 读写 综合课 架构 拼图 阅读 科普 绘本 应用 绘本 综合 视角 路径 探析 独白 文本 听说 反思 语篇 主题 意义 读后 词汇 巩固 活动 现有 认知 基础 发展 语言 能力 思维 品质 文学 语篇 后续 活动 听力 多项 匹配 中小学生 思辨 能力 价值 探析 聚焦 训练 拓展 自学 活动 指导 项目 磨课 经历 小说 文本 后续 写微 剧本 多维 阅读 读写 语言 思维 同步 转化 教学策略 英语词汇 学习策略 路径 形成 评价 任务 视域 读写能力 多维 阅读 虚构 文本 师生 合作 评价 后续 预习 三年级 学困生 转化 行动 混合式 英语语法 以读 促写 以写 促读 驱动 原版书 读写 新课标 理念 三年级 对话 教学模式 再构 以京版 典范 小说 载体 以读 促写 后续 人教版 英语教材 读后 仿写 衔接 重要 元素 诊断 测评 后续 支架 搭建 课例 参与 背诵 模式 叙事 背诵 专题 语篇 背诵 活动 语言 输出 质量 文学作品 三维 进阶 续写 样式 典范 主题 知识 结构化 自主 核心 素养 背景 思维 品质 发展 绘本 英语教学 目标 对策 写作 自我 评价 英语教学 促思 路径 模态 语篇 任务 英语课堂 辩论 语言 能力 思维 品质 协同 发展 初探 人教版 八年级 下册 阅读课 小说 意识流 语言 翻译 尤利西斯 刘译 管窥 红楼梦 模糊 限制 英译 过程 写作 发展 创造性 思维能力 同伴 互评 互评 量表 写作 主要 解决 主题 语境 英语词汇 附带 教学策略 活动 综合 技能 板块 教学活动 关联性 思维 可视化 工具 整本书 读后 活动 青少年 成长 英文 小说 宗教 世界观 古典 审美 原则 蒲柏 文学批评 思想 活动 单元 词汇 作业 任务 驱动 阅读 复述 能力 读者 剧场 中学生 朗读 能力 朗读 体验 互联网 时代 获取 词汇学 知识 新途径 在线 词典 中小学 英语教学 启示 情境 高阶 思维 阅读课 读后 活动 单元 整体 视角 写作 活动 深度 读写 过程 输出 语言 技能 评委 点评 反观 认知 情况 全国 课堂教学 观摩 培训 课为 个案 活动 对话 教学策略 五年级 上册 主题 语境 引领 英语语法 研版 标准 第二册 第六 单元 案例 英语课堂 视频 探讨
+</pre></div>
+</div>
+</div>
+</div>
+<p>But even after applying the stopwords, I found that the results still had a few noisy or meaningless terms. So I manually removed a few more — kind of a second-round cleanup.</p>
+</section>
+<section id="word-frequency-counting">
+<h2>4. Word frequency counting<a class="headerlink" href="#word-frequency-counting" title="Link to this heading">#</a></h2>
+<p>Let’s count the word frequency.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count the keyword frequency</span>
+<span class="n">word_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">processed_text</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="wordcloud-generating">
+<h2>5. Wordcloud Generating<a class="headerlink" href="#wordcloud-generating" title="Link to this heading">#</a></h2>
+<p>Custom the wordcloud picture.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate wordcloud</span>
+<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
+    <span class="n">font_path</span><span class="o">=</span><span class="s2">&quot;/System/Library/Fonts/Supplemental/Songti.ttc&quot;</span><span class="p">,</span>  
+    <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>  <span class="c1"># background color</span>
+    <span class="n">max_words</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>            <span class="c1"># The maximum number of words displayed</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>    <span class="c1"># The size of picture</span>
+    <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span>         <span class="c1"># color matching</span>
+<span class="p">)</span>
+
+<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">word_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualisation">
+<h2>6. Visualisation<a class="headerlink" href="#visualisation" title="Link to this heading">#</a></h2>
+<p>Use matlotlib generate a picture.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualise the wordcloud and import the picture.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">wordcloud</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;english_learning_wordcloud.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a12c789f2094a3c31a3a3d45d07b939395aaee4944a7f8610d9f0abd2bb781b7.png" src="_images/a12c789f2094a3c31a3a3d45d07b939395aaee4944a7f8610d9f0abd2bb781b7.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;wordcloud.wordcloud.WordCloud at 0x16fed7e90&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="analysis">
+<h2>7. Analysis<a class="headerlink" href="#analysis" title="Link to this heading">#</a></h2>
+<p>The word cloud generated from manuscript titles in English Language Learning highlights a clear thematic concentration on reading, thinking, writing, and classroom activity design. The most prominent term is 阅读 (reading), indicating that reading instruction is a central concern of the journal. This focus is further supported by related terms such as 语篇 (text), 读写 (reading-writing), and 读后写 (post-reading writing), suggesting an integrated approach to reading and writing in the language learning process.</p>
+<p>思维 (thinking) appears frequently, reflecting an emphasis on the cultivation of critical and reflective thinking skills. This focus aligns with broader educational goals that aim to develop students’ cognitive abilities and strategic learning approaches. Terms like 策略 (strategy), 路径 (pathway), and 反思 (reflection) further indicate an interest in thinking-driven teaching models and learning processes.</p>
+<p>写作 (writing) is another dominant theme, pointing to the importance of writing pedagogy and its integration with reading activities. The recurrence of terms such as 任务 (task), 输出 (output), and 作文 (composition) suggests a task-based orientation that emphasizes writing as both a learning objective and a method for language output.</p>
+<p>Classroom practice is a significant dimension of the submitted manuscripts, as seen in keywords like 课堂 (classroom), 活动 (activity), 实施 (implementation), and 教学策略 (teaching strategies). These terms imply a strong emphasis on practical teaching, lesson design, and classroom engagement. Additional words such as 单元 (unit), 项目 (project), and 模式 (model) point to structural considerations in curriculum design and innovative instructional formats.</p>
+<p>Overall, the thematic focus of the journal’s manuscripts reflects a strong commitment to reading-centered instruction, the integration of thinking and writing, and the development of effective and engaging classroom practices.</p>
+</section>
+<section id="a-small-side-quest-regional-word-cloud">
+<h2>A small side quest：regional word cloud！<a class="headerlink" href="#a-small-side-quest-regional-word-cloud" title="Link to this heading">#</a></h2>
+<p>While I was working on the title-based word cloud, I got curious — what if I looked at author affiliations or regions instead? Maybe that would reveal something interesting too.</p>
+<p>So I made a small tweak in the code to switch the data source: instead of grabbing all the titles, I pulled in the “作者地区” (author region) column and built a new corpus from that.</p>
+<p>Of course, this required updating the stopword list again. This time I removed a different set of high-frequency but unhelpful words like “省” (province), “市” (city), “大学” (university), and similar generic location terms. I also filtered out empty entries and single-character tokens to keep things clean.</p>
+<p>Then I used the same pipeline — segmentation, filtering, counting, word cloud generation — and it worked nicely.</p>
+<p>The result? A word cloud that visually shows which regions or institutions appear most frequently. Not exactly deep analysis, but it was a fun side experiment and a good reminder that once the basic pipeline is built, you can reuse it flexibly for different types of text.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import libraries</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">jieba</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;/Users/snowliu/Downloads/20250307170539.xls&quot;</span>
+
+<span class="c1"># read Excel</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s2">&quot;稿件信息&quot;</span><span class="p">,</span><span class="n">header</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1"># 2. Processing Chinese word segmentation</span>
+<span class="k">def</span> <span class="nf">process_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># Custom stopword list</span>
+    <span class="n">stopwords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;市&#39;</span><span class="p">,</span> <span class="s1">&#39;省&#39;</span><span class="p">,</span> <span class="s1">&#39;区&#39;</span><span class="p">,</span> <span class="s1">&#39;教育&#39;</span><span class="p">,</span> <span class="s1">&#39;发展&#39;</span><span class="p">,</span> <span class="s1">&#39;第&#39;</span><span class="p">,</span> <span class="s1">&#39;一&#39;</span><span class="p">,</span> <span class="s1">&#39;二&#39;</span><span class="p">,</span> <span class="s1">&#39;州&#39;</span><span class="p">,</span><span class="s1">&#39;学校&#39;</span><span class="p">,</span><span class="s1">&#39;第一&#39;</span><span class="p">,</span><span class="s1">&#39;附属中学&#39;</span><span class="p">,</span><span class="s1">&#39;中学&#39;</span><span class="p">,</span><span class="s1">&#39;小学&#39;</span><span class="p">,</span><span class="s1">&#39;第二&#39;</span><span class="p">,</span><span class="s1">&#39;大学&#39;</span><span class="p">,</span><span class="s1">&#39;中学&#39;</span><span class="p">,</span><span class="s1">&#39;中心小学&#39;</span><span class="p">,</span><span class="s1">&#39;附属&#39;</span><span class="p">,</span><span class="s1">&#39;教师&#39;</span><span class="p">,</span><span class="s1">&#39;研究院&#39;</span><span class="p">,</span><span class="s1">&#39;中心&#39;</span><span class="p">,</span><span class="s1">&#39;高级中学&#39;</span><span class="p">,</span><span class="s1">&#39;区景苑&#39;</span><span class="p">,</span><span class="s1">&#39;分院&#39;</span><span class="p">,</span><span class="s1">&#39;外国语&#39;</span><span class="p">,</span><span class="s1">&#39;进修学校&#39;</span><span class="p">,</span><span class="s1">&#39;第三&#39;</span><span class="p">,</span><span class="s1">&#39;师范大学&#39;</span><span class="p">,</span><span class="s1">&#39;师大附中&#39;</span><span class="p">,</span><span class="s1">&#39;科技&#39;</span><span class="p">,</span><span class="s1">&#39;研究&#39;</span><span class="p">,</span><span class="s1">&#39;第三十九&#39;</span><span class="p">,</span><span class="s1">&#39;中朗悦&#39;</span><span class="p">,</span><span class="s1">&#39;集团&#39;</span><span class="p">,</span><span class="s1">&#39;研究所&#39;</span><span class="p">,</span><span class="s1">&#39;农村&#39;</span><span class="p">,</span><span class="s1">&#39;陈经纶&#39;</span><span class="p">,</span><span class="s1">&#39;阳光&#39;</span><span class="p">,</span><span class="s1">&#39;科学&#39;</span><span class="p">,</span><span class="s1">&#39;锦绣&#39;</span><span class="p">,</span><span class="s1">&#39;国际&#39;</span><span class="p">,</span><span class="s1">&#39;第七十九&#39;</span><span class="p">,</span><span class="s1">&#39;信息工程&#39;</span><span class="p">])</span>
+   
+    <span class="c1"># Use jieba for word segmentation</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">jieba</span><span class="o">.</span><span class="n">lcut</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+    
+    <span class="c1"># Filter out stopwords and non-Chinese characters</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> 
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> 
+           <span class="s1">&#39;</span><span class="se">\u4e00</span><span class="s1">&#39;</span> <span class="o">&lt;=</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="s1">&#39;</span><span class="se">\u9fff</span><span class="s1">&#39;</span> <span class="ow">and</span> 
+           <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stopwords</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
+
+<span class="c1"># 3. Generate corpus</span>
+<span class="n">all_titles</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;地区&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">())</span>
+<span class="n">processed_text</span> <span class="o">=</span> <span class="n">process_text</span><span class="p">(</span><span class="n">all_titles</span><span class="p">)</span>
+
+<span class="c1"># 4. Count word frequency</span>
+<span class="n">word_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">processed_text</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+<span class="c1"># 5. Generate word cloud</span>
+<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span>
+    <span class="n">font_path</span><span class="o">=</span><span class="s2">&quot;/System/Library/Fonts/Supplemental/Songti.ttc&quot;</span><span class="p">,</span>  
+    <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>  
+    <span class="n">max_words</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>            
+    <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>   
+    <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span>        
+<span class="p">)</span>
+
+<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">wc</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">word_counts</span><span class="p">)</span>
+
+<span class="c1"># visualisation</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">wordcloud</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;english_learning_wordcloud.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/0fc61567bfb7759c9351c17ae2e439ea714e63865d95f9868bd9d964e9f2cebf.png" src="_images/0fc61567bfb7759c9351c17ae2e439ea714e63865d95f9868bd9d964e9f2cebf.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;wordcloud.wordcloud.WordCloud at 0x16d50fef0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusion">
+<h2>8. Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>This project focuses on analysing the thematic trends of manuscripts published in the journal <em>English Language Learning</em> by applying natural language processing (NLP) techniques using Python. The manuscript titles, exported in Excel format from the editorial system, were first imported and processed using the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library. Chinese word segmentation was performed with the <code class="docutils literal notranslate"><span class="pre">jieba</span></code> package, and a custom stopword list was applied to remove common but semantically insignificant words, as well as non-Chinese characters, thereby enhancing the focus and clarity of the extracted keywords.</p>
+<p>Following text processing, word frequency statistics were calculated using the <code class="docutils literal notranslate"><span class="pre">Counter</span></code> module. The <code class="docutils literal notranslate"><span class="pre">wordcloud</span></code> and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> libraries were then used to visualize the results in the form of a word cloud. The visualization clearly highlights frequently occurring terms such as “阅读” (reading), “思维” (thinking), “写作” (writing), “课堂” (classroom), “活动” (activity), and “语篇” (text/discourse), indicating that current research in the journal places a strong emphasis on reading instruction, cognitive development, writing pedagogy, and classroom-based practices. These findings not only reflect ongoing trends in language education research but also provide data-driven insights into the journal’s topical orientation.</p>
+<p>This project demonstrates the effective application of natural language processing in the analysis of educational text data. It offers an end-to-end pipeline from data import and preprocessing to statistical analysis and visualization. The method presented is scalable and adaptable, with the potential to be applied in other contexts such as tracking topic evolution, identifying research hotspots, and optimizing editorial strategies in academic publishing. As such, it contributes to the broader goal of promoting digital and intelligent approaches in education research.</p>
+</section>
+<section id="what-did-i-learn">
+<h2>What did I learn?<a class="headerlink" href="#what-did-i-learn" title="Link to this heading">#</a></h2>
+<p>Building this pipeline was actually straightforward, but deciding what to keep or discard (in text cleaning) took the most thought.
+I now appreciate how useful a domain-specific stopword list is. Generic ones don’t work well in educational contexts.
+Visualization helps, but interpretation is key. A word cloud is just a starting point — I had to think about why certain words stood out and what they represented.
+More personally:</p>
+<p>I liked doing this kind of mini-project. It felt like a mix of editing, language analysis, and data work — all things I enjoy.
+It gave me ideas for bigger things I might try next (e.g., topic modeling, cross-year comparisons, author-based trends).</p>
+</section>
+<section id="what-could-be-better">
+<h2>What could be better?<a class="headerlink" href="#what-could-be-better" title="Link to this heading">#</a></h2>
+<p>If I had more time, I’d love to:</p>
+<p>Use TF-IDF instead of raw word counts (to highlight more unique terms)
+Try topic modeling (like LDA) to see if articles cluster into different themes
+Track keyword changes over time (like a mini “research trend report”)
+Also… make the word cloud prettier. But that’s just me being picky.</p>
+</section>
+<section id="final-thought">
+<h2>Final thought<a class="headerlink" href="#final-thought" title="Link to this heading">#</a></h2>
+<p>This wasn’t a big or fancy project, but it was honest and useful. I got to work with real data from my field, sharpen my Python skills, and reflect on what’s happening in English education research — all at once.</p>
+<p>Sometimes that’s all you need: a small project, a real question, and a few good tools.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Content with notebooks</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-project-about">What is this project about？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-did-i-do-it">Why did i do it？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-tools-did-i-use">What tools did I use？</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-import">1. Data import</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing">2. Data processing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus-generating">3. Corpus Generating</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-frequency-counting">4. Word frequency counting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wordcloud-generating">5. Wordcloud Generating</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisation">6. Visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis">7. Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-small-side-quest-regional-word-cloud">A small side quest：regional word cloud！</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">8. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-i-learn">What did I learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-could-be-better">What could be better?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-thought">Final thought</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
